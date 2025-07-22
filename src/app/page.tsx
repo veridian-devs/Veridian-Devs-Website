@@ -9,7 +9,7 @@ export default function page(): React.ReactNode {
 
 			<div className="fixed inset-0 -z-10">
 				<WavyBackground
-					waveColor={[0.0, 0.2, 0.3]}
+					waveColor={[0.1411, 0.1764, 0.5490]}
 					disableAnimation={false}
 					enableMouseInteraction={true}
 					mouseRadius={0.3}

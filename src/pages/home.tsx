@@ -8,9 +8,9 @@ export default function Home() {
             <div className="w-fit h-fit px-4 py-1 rounded-4xl bg-[var(--secondary)]/40 backdrop-blur-3xl border border-gray-200">
                 <ShinyText className='text-md'>Veridian Devs. - Your Dev Partner</ShinyText>
             </div>
-            <h1 className='capitalize text-center font-extrabold text-4xl md:text-7xl'>We don't just develop <LineShadow className="italic" shadowColor={'white'}>
-                Websites
-            </LineShadow>, <br /> We build <LineShadow className='italic' shadowColor='white'>market</LineShadow> <LineShadow className='italic' shadowColor='white'>leaders.</LineShadow> </h1>
+            <h1 className='capitalize text-center font-extrabold text-4xl md:text-7xl'>We don't just launch <LineShadow className="italic" shadowColor={'white'}>
+                sites
+            </LineShadow>, <br /> We launch <LineShadow className='italic' shadowColor='white'>legacies.</LineShadow></h1>
         </div>
     )
 }
