@@ -196,7 +196,6 @@ interface WavesProps {
     enableMouseInteraction: boolean;
     mouseRadius: number;
 }
-
 function Waves({
     waveSpeed,
     waveFrequency,
@@ -237,6 +236,30 @@ function Waves({
         }
     }, [size, gl]);
 
+    // **MODIFICATION START: Add a global pointer move listener**
+    useEffect(() => {
+        if (!enableMouseInteraction) return;
+
+        const handlePointerMove = (event: PointerEvent) => {
+            const rect = gl.domElement.getBoundingClientRect();
+            const dpr = gl.getPixelRatio();
+
+            // Calculate pointer position relative to the canvas
+            const x = (event.clientX - rect.left) * dpr;
+            const y = (event.clientY - rect.top) * dpr;
+
+            setMousePos({ x, y });
+        };
+
+        window.addEventListener("pointermove", handlePointerMove);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener("pointermove", handlePointerMove);
+        };
+    }, [enableMouseInteraction, gl, setMousePos]);
+    // **MODIFICATION END**
+
     useFrame(({ clock }) => {
         if (!disableAnimation) {
             waveUniformsRef.current.time.value = clock.getElapsedTime();
@@ -253,15 +276,6 @@ function Waves({
         }
     });
 
-    const handlePointerMove = (e: ThreeEvent<PointerEvent>) => {
-        if (!enableMouseInteraction) return;
-        const rect = gl.domElement.getBoundingClientRect();
-        const dpr = gl.getPixelRatio();
-        const x = (e.clientX - rect.left) * dpr;
-        const y = (e.clientY - rect.top) * dpr;
-        setMousePos({ x, y });
-    };
-
     return (
         <>
             <mesh ref={mesh} scale={[viewport.width, viewport.height, 1]}>
@@ -276,20 +290,9 @@ function Waves({
             <EffectComposer>
                 <RetroEffect colorNum={colorNum} pixelSize={pixelSize} />
             </EffectComposer>
-
-            <mesh
-                onPointerMove={handlePointerMove}
-                position={[0, 0, 0.01]}
-                scale={[viewport.width, viewport.height, 1]}
-                visible={false}
-            >
-                <planeGeometry args={[1, 1]} />
-                <meshBasicMaterial transparent opacity={0} />
-            </mesh>
         </>
     );
 }
-
 interface WavyProps {
     waveSpeed?: number;
     waveFrequency?: number;

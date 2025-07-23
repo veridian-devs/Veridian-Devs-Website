@@ -5,7 +5,7 @@ import React from 'react'
 import Home from '@/pages/home';
 export default function page(): React.ReactNode {
 	return (
-		<main className="relative w-full isolate">
+		<main className="relative w-full">
 
 			<div className="fixed inset-0 -z-10">
 				<WavyBackground
