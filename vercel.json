@@ -4,13 +4,4 @@
     "enabled": true,
     "productionBranch": "main"
   },
-  "builds": [
-    {
-      "src": ".",
-      "use": "@vercel/next"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
 }
