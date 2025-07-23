@@ -1,14 +1,16 @@
 {
-    "$schema": "https://openapi.vercel.sh/vercel.json",
-    "git": {
-        "productionBranch": "main",
-        "deploymentEnabled": {
-            "main": true,
-            "*": false
-        }
-    },
-    "github": {
-        "autoAlias": false,
-        "autoJobCancelation": true
+  "version": 2,
+  "github": {
+    "enabled": true,
+    "productionBranch": "main"
+  },
+  "builds": [
+    {
+      "src": ".",
+      "use": "@vercel/next"
     }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
