@@ -10,7 +10,7 @@ export default function page(): React.ReactNode {
 		<main className="relative w-full">
 			<div className="fixed inset-0 -z-10">
 				<WavyBackground
-					waveColor={[0.1411, 0.1764, 0.5490]}
+					waveColor={[0.1176, 0.2274, 0.5411 ]}
 					disableAnimation={false}
 					enableMouseInteraction={true}
 					mouseRadius={0.3}
@@ -26,11 +26,11 @@ export default function page(): React.ReactNode {
 				<Navbar />
 
 				<div className="w-full max-h-screen h-full"><Home/></div>
-				<div className="w-full max-h-screen h-full"><Works/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
+				<div className="w-full max-h-full h-full"><Works/></div>
+				<div className="w-full max-h-full h-full"><Benifits/></div>
+				<div className="w-full max-h-full h-full"><Benifits/></div>
+				<div className="w-full max-h-full h-full"><Benifits/></div>
+				<div className="w-full max-h-full h-full"><Benifits/></div>
 			</div>
 		</main>
 	)
