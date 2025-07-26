@@ -3,6 +3,8 @@ import Navbar from '@/components/navbar';
 import WavyBackground from '@/components/ui/background'
 import React from 'react'
 import Home from '@/pages/home';
+import Works from '@/pages/works';
+import Benifits from '@/pages/benifits';
 export default function page(): React.ReactNode {
 	return (
 		<main className="relative w-full">
