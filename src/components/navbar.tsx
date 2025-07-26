@@ -56,7 +56,7 @@ export default function Navbar() {
     ];
 
     return (
-        <header className="pointer-events-auto sticky top-5 z-50 flex justify-center w-full px-4">
+        <header className="sticky top-5 z-100 flex justify-center w-full px-4">
             <div className="w-full md:max-w-7xl">
                 <GlassSurface
                     width={'100%'}
