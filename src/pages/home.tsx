@@ -1,3 +1,4 @@
+'use client';
 import LineShadow from '@/components/ui/lineShadow';
 import ShinyText from '@/components/ui/shinyText';
 import React from 'react';
