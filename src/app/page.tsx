@@ -3,8 +3,6 @@ import Navbar from '@/components/navbar';
 import WavyBackground from '@/components/ui/background'
 import React from 'react'
 import Home from '@/pages/home';
-import Works from '@/pages/works';
-import Benifits from '@/pages/benifits';
 export default function page(): React.ReactNode {
 	return (
 		<main className="relative w-full">
@@ -26,11 +24,6 @@ export default function page(): React.ReactNode {
 				<Navbar />
 
 				<div className="w-full max-h-screen h-full"><Home/></div>
-				<div className="w-full max-h-screen h-full"><Works/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
-				<div className="w-full max-h-screen h-full"><Benifits/></div>
 			</div>
 		</main>
 	)
