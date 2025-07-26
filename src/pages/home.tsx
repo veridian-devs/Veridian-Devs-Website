@@ -15,7 +15,7 @@ import CircularText from '@/components/ui/circularText';
 import Magnet from '@/components/ui/magneticEffect';
 export default function Home() {
     return (
-        <div className="flex h-full w-full flex-col items-center justify-start space-y-10 px-6 py-14 sm:py-30 md:h-dvh md:px-28 md:py-20">
+        <div className="flex h-full w-full flex-col items-center justify-start space-y-10 px-6 py-14 sm:py-30 md:px-28 md:py-20">
             <div className="h-fit w-fit rounded-4xl border border-gray-200 bg-[var(--secondary)]/40 px-3 py-1 text-center backdrop-blur-3xl">
                 <ShinyText className="text-md">
                     Veridian Devs. - Your Dev Partner

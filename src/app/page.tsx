@@ -27,10 +27,10 @@ export default function page(): React.ReactNode {
 
 				<div className="w-full max-h-screen h-full"><Home/></div>
 				<div className="w-full max-h-full h-full"><Works/></div>
+				{/* <div className="w-full max-h-full h-full"><Benifits/></div>
 				<div className="w-full max-h-full h-full"><Benifits/></div>
 				<div className="w-full max-h-full h-full"><Benifits/></div>
-				<div className="w-full max-h-full h-full"><Benifits/></div>
-				<div className="w-full max-h-full h-full"><Benifits/></div>
+				<div className="w-full max-h-full h-full"><Benifits/></div> */}
 			</div>
 		</main>
 	)
