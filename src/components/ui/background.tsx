@@ -318,7 +318,7 @@ export default function WavyBackground({
 }: WavyProps) {
     return (
         <Canvas
-            className="w-full h-full relative"
+            className="w-screen h-screen fixed top-0 left-0 -z-10"
             camera={{ position: [0, 0, 6] }}
             dpr={typeof window !== "undefined" ? (pixelSize <= 2 ? window.devicePixelRatio : 2) : 2}
             gl={{ antialias: true, preserveDrawingBuffer: true }}

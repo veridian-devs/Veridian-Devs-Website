@@ -11,9 +11,10 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Link from 'next/link';
+import { CldImage } from 'next-cloudinary';
 
 interface CarouselProps {
-    images: { src: string; alt: string, url: string }[];
+    images: { src: string; alt: string; url: string }[];
     autoplayDelay?: number;
     slideShadows: boolean;
 }
@@ -49,7 +50,7 @@ export const CardSwipe: React.FC<CarouselProps> = ({
         <section className="w-ace-y-4">
             <style>{css}</style>
             <div className="flex w-full items-center justify-center gap-4">
-                <div className="w-full md:w-1/2">
+                <div className="w-full">
                     <Swiper
                         autoplay={{
                             delay: autoplayDelay,
@@ -73,7 +74,7 @@ export const CardSwipe: React.FC<CarouselProps> = ({
                         {images.map((image, index) => (
                             <SwiperSlide key={index}>
                                 <div className="size-full rounded-3xl">
-                                    <Image
+                                    <CldImage
                                         src={image.src}
                                         width={500}
                                         height={500}
@@ -95,10 +96,10 @@ export const CardSwipe: React.FC<CarouselProps> = ({
                         {images.map((image, index) => (
                             <SwiperSlide key={index}>
                                 <div className="size-full rounded-3xl">
-                                    <Image
+                                    <CldImage
                                         src={image.src}
-                                        width={200}
-                                        height={200}
+                                        width={500}
+                                        height={500}
                                         className="size-full rounded-xl"
                                         alt={image.alt}
                                     />
