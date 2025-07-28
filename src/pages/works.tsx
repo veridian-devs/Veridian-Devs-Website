@@ -1,5 +1,5 @@
 'use client';
-import { CardSwipe } from '@/components/featuredWorks';
+import FeaturedWorks from '@/components/featuredWorks';
 
 export default function Works() {
     return (
@@ -17,41 +17,26 @@ export default function Works() {
                         </div>
                     </div>
                 </div>
-                <div className={`h-full w-full md:w-1/2 pt-5`}>
-                    <CardSwipe
+                <div className={`h-full w-full md:w-1/2`}>
+                    <FeaturedWorks
                         images={[
                             {
-                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753613172/cld-sample-3.jpg',
+                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753716964/YAATRIKA_b2lzzo.png',
                                 alt: 'Work 1',
                                 url: 'https://yaatrika.vercel.app/',
                             },
                             {
-                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753613172/cld-sample-2.jpg',
+                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753716966/PORTFOLIO_pfbtze.png',
                                 alt: 'Work 2',
                                 url: 'https://shiv-am-saxena.vercel.app/',
                             },
                             {
-                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753613171/samples/coffee.jpg',
+                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753716963/UNIONYX_muncwf.png',
                                 alt: 'Work 3',
                                 url: 'https://unionyx.vercel.app/',
                             },
-                            {
-                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753613172/cld-sample-3.jpg',
-                                alt: 'Work 4',
-                                url: 'https://yaatrika.vercel.app/',
-                            },
-                            {
-                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753613172/cld-sample-2.jpg',
-                                alt: 'Work 5',
-                                url: 'https://shiv-am-saxena.vercel.app/',
-                            },
-                            {
-                                src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753613171/samples/coffee.jpg',
-                                alt: 'Work 6',
-                                url: 'https://unionyx.vercel.app/',
-                            },
                         ]}
-                        slideShadows={false}
+                        slideShadows={true}
                     />
                 </div>
             </div>

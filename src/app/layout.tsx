@@ -11,7 +11,7 @@ const anta = Anta({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://veridian-devs.vercel.app'),
+    metadataBase: new URL('https://veridiandevs.tech'),
     title: {
         template: '%s | Veridian Devs',
         default: 'Veridian Devs - Innovative Software & Web Development',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         title: 'Veridian Devs - Innovative Software & Web Development',
         description:
             'We build custom web and software solutions that drive growth.',
-        url: 'https://veridian-devs.vercel.app',
+        url: 'https://veridiandevs.tech',
         siteName: 'Veridian Devs',
         images: [
             {
@@ -78,26 +78,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${anta.className} antialiased`}>
-                <main className="relative w-full">
-                    <div className="fixed inset-0 -z-10 bg-[url('https://res.cloudinary.com/dj046hh4m/image/upload/v1753618056/Screenshot_2025-07-27_173634_va845x.png')] bg-cover bg-center bg-no-repeat">
-                            {/* <WavyBackground
-                                waveColor={[0.1176, 0.2274, 0.5411]}
-                                disableAnimation={false }
-                                enableMouseInteraction={false}
-                                mouseRadius={0}
-                                colorNum={20}
-                                waveAmplitude={0.5}
-                                waveFrequency={3}
-                                waveSpeed={0.02}
-                            /> */}
-                    </div>
+            <body className={`${anta.className} antialiased  !w-screen max-w-screen`}>
+                <main className="relative w-screen h-full">
+                    <div className="fixed inset-0 -z-10 bg-[url('https://res.cloudinary.com/dj046hh4m/image/upload/v1753618056/Screenshot_2025-07-27_173634_va845x.png')] bg-cover bg-center bg-no-repeat"/>
 
-                    {/* This div's purpose is for the scrolling layout effect, so a div is correct. */}
-                    <div className="relative z-0 min-h-max w-full">
                         <Navbar />
                         {children}
-                    </div>
                 </main>
             </body>
         </html>

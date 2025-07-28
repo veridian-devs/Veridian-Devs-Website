@@ -1,6 +1,4 @@
 'use client';
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
 
 export default function Benifits() {
     return (
@@ -18,12 +16,8 @@ export default function Benifits() {
                         </div>
                     </div>
                 </div>
-                <div className="relative flex h-full w-full flex-col items-start justify-start gap-60 md:w-1/2">
+                <div className="relative flex h-full w-full flex-col items-start justify-start gap-10 md:w-1/2 md:gap-60">
                     {/* <!-- Card stack container --> */}
-                    <StickyCards />
-                    <StickyCards />
-                    <StickyCards />
-                    <StickyCards />
                     <StickyCards />
                     <StickyCards />
                     <StickyCards />
@@ -36,11 +30,11 @@ export default function Benifits() {
 
 const StickyCards = () => {
     return (
-        <div className="sticky flex h-40 w-full items-center justify-center rounded-xl md:top-1/3">
-            <div className="h-full w-1/2 rounded-l-xl bg-green-500/75 px-3 py-2 backdrop-blur-md">
+        <div className="sticky top-44 flex h-60 w-full flex-col items-center justify-center rounded-xl overflow-hidden md:top-1/3 md:h-40 md:flex-row">
+            <div className="h-full w-full rounded-t-xl bg-green-500/75 px-3 py-2 backdrop-blur-md md:w-1/2 md:rounded-t-none md:rounded-l-xl">
                 With Veridians &rarr;
             </div>
-            <div className="h-full w-1/2 rounded-r-xl bg-red-500/75 px-3 py-2 backdrop-blur-md">
+            <div className="h-full w-full rounded-b-xl bg-red-500/75 px-3 py-2 backdrop-blur-md md:w-1/2 md:rounded-b-none md:rounded-br-xl md:rounded-tr-xl ">
                 Without Veridians &rarr;{' '}
             </div>
         </div>
