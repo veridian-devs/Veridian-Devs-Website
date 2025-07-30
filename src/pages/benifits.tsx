@@ -11,7 +11,7 @@ export default function Benifits() {
                                 Benefits
                             </h2>
                             <p className="text-md flex items-center gap-1 md:text-2xl">
-                                Seamless Images carousel animation.
+                                This could be you &rarr;{' '}
                             </p>
                         </div>
                     </div>

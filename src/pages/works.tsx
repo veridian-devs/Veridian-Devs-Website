@@ -51,13 +51,13 @@ export default function Works() {
                                 Works
                             </h2>
                             <p className="text-md flex items-center gap-1 md:text-2xl">
-                                Seamless Images carousel animation.
+                                &larr; Narrating success stories.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div className={`relative h-full w-full md:w-1/2`}>
-                    <Marquee pauseOnHover className="[--duration:10s] rounded-2xl">
+                    <Marquee pauseOnHover className="[--duration:18s] rounded-2xl">
                         {images.map((image, idx) => (
                             <div
                                 key={idx}

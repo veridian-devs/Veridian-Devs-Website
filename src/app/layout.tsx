@@ -144,7 +144,8 @@ export default function RootLayout({
             <MetaTags />
             <body className={`${anta.className} antialiased`}>
                 <main className="relative h-full w-full">
-                    <div className="fixed inset-0 -z-10 bg-[url('https://res.cloudinary.com/dj046hh4m/image/upload/v1753618056/Screenshot_2025-07-27_173634_va845x.png')] bg-cover bg-center bg-no-repeat" />
+                    <div className="fixed inset-0 -z-10 bg-[#403e3c] bg-center bg-no-repeat" />
+                    {/* <div className="fixed inset-0 -z-10 bg-[url('https://res.cloudinary.com/dj046hh4m/image/upload/v1753618056/Screenshot_2025-07-27_173634_va845x.png')] bg-cover bg-center bg-no-repeat" /> */}
 
                     <Navbar />
                     {children}

@@ -22,7 +22,7 @@ export default function Home() {
                 </ShinyText>
             </div>
             <h1 className="w-full text-center text-5xl font-extrabold tracking-wide capitalize md:text-7xl">
-                We don't just launch
+                We don't just launch{' '}
                 <LineShadow className="italic" shadowColor={'white'}>
                     sites
                 </LineShadow>

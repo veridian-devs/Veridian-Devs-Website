@@ -4,10 +4,42 @@
 
 @theme {
 	--font-anta: "Anta", sans-serif;
-	--primary: #F1EAD8;
-	/* Vanilla Cream*/
-	--secondary: #242d4c;
-	/* Midnight Indigo*/
+	/* primary */
+	--color-bay-of-many-50: #eff3ff;
+	--color-bay-of-many-100: #dbe4fe;
+	--color-bay-of-many-200: #bfcffe;
+	--color-bay-of-many-300: #93aefd;
+	--color-bay-of-many-400: #6088fa;
+	--color-bay-of-many-500: #3b6bf6;
+	--color-bay-of-many-600: #2558eb;
+	--color-bay-of-many-700: #1d4dd8;
+	--color-bay-of-many-800: #1e44af;
+	--color-bay-of-many-900: #1e3a8a;
+	--color-bay-of-many-950: #172754;
+	/* secondary */
+	--color-orange-peel-50: #fff8eb;
+	--color-orange-peel-100: #feeac7;
+	--color-orange-peel-200: #fdd28a;
+	--color-orange-peel-300: #fcbb4d;
+	--color-orange-peel-400: #fbab24;
+	--color-orange-peel-500: #f59e0b;
+	--color-orange-peel-600: #d98b06;
+	--color-orange-peel-700: #b47409;
+	--color-orange-peel-800: #92610e;
+	--color-orange-peel-900: #78510f;
+	--color-orange-peel-950: #452c03;
+	/* accent */
+	--color-mountain-meadow-50: #ecfdf7;
+	--color-mountain-meadow-100: #d1faec;
+	--color-mountain-meadow-200: #a7f3da;
+	--color-mountain-meadow-300: #6ee7bf;
+	--color-mountain-meadow-400: #34d39e;
+	--color-mountain-meadow-500: #10b981;
+	--color-mountain-meadow-600: #059666;
+	--color-mountain-meadow-700: #047852;
+	--color-mountain-meadow-800: #065f42;
+	--color-mountain-meadow-900: #064e36;
+	--color-mountain-meadow-950: #022c1e;
 }
 
 /* =========================
