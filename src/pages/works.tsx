@@ -8,18 +8,33 @@ export default function Works() {
     const images = [
         {
             src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753716964/YAATRIKA_b2lzzo.png',
-            alt: 'Work 1',
+            alt: 'Work 1 - YAATRIKA',
             url: 'https://yaatrika.vercel.app/',
         },
         {
             src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753791886/PORTFOLIO_si86bg.jpg',
-            alt: 'Work 2',
+            alt: 'Work 2 - PORTFOLIO_SHIVAM-SAXENA',
             url: 'https://shiv-am-saxena.vercel.app/',
         },
         {
             src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753716963/UNIONYX_muncwf.png',
-            alt: 'Work 3',
+            alt: 'Work 3 - UNIONYX',
             url: 'https://unionyx.vercel.app/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753792035/music-web_qcxufi.png',
+            alt: 'Work 4 - MUSIC-WEB',
+            url: 'https://mehrotravinayak6.github.io/music_web/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753792027/Musica_fee4bp.png',
+            alt: 'Work 5 - MUSICA',
+            url: 'https://mehrotravinayak6.github.io/musica/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753792021/Serinidad_homes_dz59fx.png',
+            alt: 'Work 6 - SERENIDAD_HOMES',
+            url: 'https://mehrotravinayak6.github.io/SERENI/',
         },
         {
             src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753791883/OTHER_WORKS_wqx1uv.png',
