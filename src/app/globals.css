@@ -3,87 +3,87 @@
 /*  */
 
 @theme {
-  --font-anta: "Anta", sans-serif;
-  --primary: #F1EAD8;
-  /* Vanilla Cream*/
-  --secondary: #242d8c;
-  /* Midnight Indigo*/
+	--font-anta: "Anta", sans-serif;
+	--primary: #F1EAD8;
+	/* Vanilla Cream*/
+	--secondary: #242d4c;
+	/* Midnight Indigo*/
 }
 
 /* =========================
   Base Styles
 ========================= */
 @layer base {
-  body {
-    font-family: var(--font-anta);
-    background-color: var(--secondary);
-    color: var(--primary);
-    width: 100%;
-  }
+	body {
+		font-family: var(--font-anta);
+		background-color: var(--secondary);
+		color: var(--primary);
+		width: 100%;
+	}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-anta);
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-anta);
+	}
 
-  a {
-    color: var(--primary);
-  }
+	a {
+		color: var(--primary);
+	}
 }
 
 @theme inline {
-  --animate-shiny-text: shiny-text 8s infinite;
+	--animate-shiny-text: shiny-text 8s infinite;
 
-  @keyframes shiny-text {
+	@keyframes shiny-text {
 
-    0%,
-    90%,
-    100% {
-      background-position: calc(-100% - var(--shiny-width)) 0;
-    }
+		0%,
+		90%,
+		100% {
+			background-position: calc(-100% - var(--shiny-width)) 0;
+		}
 
-    30%,
-    60% {
-      background-position: calc(100% + var(--shiny-width)) 0;
-    }
-  }
+		30%,
+		60% {
+			background-position: calc(100% + var(--shiny-width)) 0;
+		}
+	}
 
-  --animate-marquee: marquee var(--duration) infinite linear;
-  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+	--animate-marquee: marquee var(--duration) infinite linear;
+	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
 
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-  }
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
+		}
+	}
 
-  @keyframes marquee-vertical {
-    from {
-      transform: translateY(0);
-    }
+	@keyframes marquee-vertical {
+		from {
+			transform: translateY(0);
+		}
 
-    to {
-      transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
+		to {
+			transform: translateY(calc(-100% - var(--gap)));
+		}
+	}
 
-  --animate-line-shadow: line-shadow 15s linear infinite;
+	--animate-line-shadow: line-shadow 15s linear infinite;
 
-  @keyframes line-shadow {
-    0% {
-      background-position: 0 0;
-    }
+	@keyframes line-shadow {
+		0% {
+			background-position: 0 0;
+		}
 
-    100% {
-      background-position: 100% -100%;
-    }
-  }
+		100% {
+			background-position: 100% -100%;
+		}
+	}
 }

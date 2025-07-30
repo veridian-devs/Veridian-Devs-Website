@@ -1,95 +1,77 @@
-'use client';
+import { cn } from '@/lib/utils';
+import { ComponentPropsWithoutRef } from 'react';
 
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css/effect-cards';
-import { EffectCards } from 'swiper/modules';
-
-import 'swiper/css';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import Link from 'next/link';
-import { CldImage } from 'next-cloudinary';
-
-interface CarouselProps {
-    images: { src: string; alt: string; url: string }[];
-    autoplayDelay?: number;
-    slideShadows?: boolean;
+interface MarqueeProps extends ComponentPropsWithoutRef<'div'> {
+    /**
+     * Optional CSS class name to apply custom styles
+     */
+    className?: string;
+    /**
+     * Whether to reverse the animation direction
+     * @default false
+     */
+    reverse?: boolean;
+    /**
+     * Whether to pause the animation on hover
+     * @default false
+     */
+    pauseOnHover?: boolean;
+    /**
+     * Content to be displayed in the marquee
+     */
+    children: React.ReactNode;
+    /**
+     * Whether to animate vertically instead of horizontally
+     * @default false
+     */
+    vertical?: boolean;
+    /**
+     * Number of times to repeat the content
+     * @default 4
+     */
+    repeat?: number;
 }
-export default function FeaturedWorks({
-    images,
-    autoplayDelay = 1500,
-    slideShadows = false,
-}: CarouselProps) {
+
+export function Marquee({
+    className,
+    reverse = false,
+    pauseOnHover = false,
+    children,
+    vertical = false,
+    repeat = 4,
+    ...props
+}: MarqueeProps) {
     return (
-        <div className="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md overflow-x-auto px-2 sm:px-4 md:px-5">
-            <Swiper
-            autoplay={{
-                delay: autoplayDelay,
-                disableOnInteraction: false,
-            }}
-            effect={'cards'}
-            grabCursor={false}
-            loop={true}
-            slidesPerView={'auto'}
-            rewind={true}
-            cardsEffect={{
-                slideShadows: slideShadows,
-            }}
-            modules={[EffectCards, Autoplay, Pagination, Navigation]}
-            className="w-full"
-            >
-            {images.map((image, index) => (
-                <SwiperSlide
-                key={index}
-                className="flex items-center justify-center"
-                >
-                <div className="relative flex h-64 w-full sm:h-80 md:h-96 items-center justify-center overflow-hidden rounded-2xl p-2 sm:p-4 md:p-5">
-                    <CldImage
-                    src={image.src}
-                    width={350}
-                    height={350}
-                    className="h-full w-full rounded-sm object-cover"
-                    alt={image.alt}
-                    />
-                    <Link
-                    href={image.url}
-                    target="_blank"
-                    className="absolute inset-0 flex items-center justify-center rounded-xl bg-[var(--primary)]/10 transition-colors duration-300 hover:bg-[var(--primary)]/50"
+        <div
+            {...props}
+            className={cn(
+                'group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:40s] [--gap:1rem]',
+                {
+                    'flex-row': !vertical,
+                    'flex-col': vertical,
+                },
+                className
+            )}
+        >
+            {Array(repeat)
+                .fill(0)
+                .map((_, i) => (
+                    <div
+                        key={i}
+                        className={cn(
+                            'flex shrink-0 justify-around [gap:var(--gap)]',
+                            {
+                                'animate-marquee flex-row': !vertical,
+                                'animate-marquee-vertical flex-col': vertical,
+                                'group-hover:[animation-play-state:paused]':
+                                    pauseOnHover,
+                                '[animation-direction:reverse]': reverse,
+                            }
+                        )}
                     >
-                    <span className="rounded-lg bg-[var(--primary)]/80 px-3 py-1.5 text-base font-semibold text-[var(--secondary)]/85">
-                        Visit Project
-                    </span>
-                    </Link>
-                </div>
-                </SwiperSlide>
-            ))}
-            {images.map((image, index) => (
-                <SwiperSlide
-                key={index}
-                className="flex !w-full items-center justify-center"
-                >
-                <div className="relative flex h-64 w-full sm:h-80 md:h-96 items-center justify-center overflow-hidden rounded-2xl p-2 sm:p-4 md:p-5">
-                    <CldImage
-                    src={image.src}
-                    width={350}
-                    height={350}
-                    className="h-full w-full rounded-sm object-cover"
-                    alt={image.alt}
-                    />
-                    <Link
-                    href={image.url}
-                    target="_blank"
-                    className="absolute inset-0 flex items-center justify-center rounded-xl bg-[var(--primary)]/30 transition-colors duration-300 hover:bg-[var(--primary)]/50"
-                    >
-                    <span className="rounded-lg bg-[var(--primary)]/80 px-3 py-1.5 text-base font-semibold text-[var(--secondary)]/85">
-                        Visit Project
-                    </span>
-                    </Link>
-                </div>
-                </SwiperSlide>
-            ))}
-            </Swiper>
+                        {children}
+                    </div>
+                ))}
         </div>
     );
 }

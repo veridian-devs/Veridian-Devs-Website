@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Anta } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar';
-import WavyBackground from '@/components/ui/background';
+import Head from 'next/head';
 
 // 2. Configure the font
 const anta = Anta({
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         siteName: 'Veridian Devs',
         images: [
             {
-                url: '/logo.png',
+                url: './logo.png',
                 width: 1200,
                 height: 630,
                 alt: 'Veridian Devs Logo and Tagline',
@@ -71,6 +71,69 @@ export const metadata: Metadata = {
     ],
 };
 
+function MetaTags() {
+    return (
+        <Head>
+            <meta
+                name="description"
+                content="Veridian Devs crafts high-performance web applications and custom software solutions to help your business grow and succeed in the digital landscape."
+            />
+            <meta
+                name="keywords"
+                content="software development, web development, custom software, next.js development, react developers, mobile apps, SEO, digital transformation, technology consulting, UI/UX design, cloud solutions, enterprise software, startup development, frontend development, backend development"
+            />
+            <meta
+                property="og:title"
+                content="Veridian Devs - Innovative Software & Web Development"
+            />
+            <meta
+                property="og:description"
+                content="We build custom web and software solutions that drive growth."
+            />
+            <meta property="og:url" content="https://veridiandevs.tech" />
+            <meta property="og:site_name" content="Veridian Devs" />
+            <meta property="og:image" content="./logo.png" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:type" content="website" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+                name="twitter:title"
+                content="Veridian Devs - Innovative Software & Web Development"
+            />
+            <meta
+                name="twitter:description"
+                content="We build custom web and software solutions that drive growth."
+            />
+            <meta name="twitter:creator" content="@veridiandevs" />
+            <meta name="twitter:image" content="/logo.png" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+            />
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="shortcut icon" href="/favicon-16x16.png" />
+            <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+            <meta name="robots" content="index, follow" />
+            <meta name="googlebot" content="index, follow" />
+            <meta
+                name="google-site-verification"
+                content="YOUR_GOOGLE_SITE_VERIFICATION_CODE"
+            />
+            <meta
+                itemProp="name"
+                content="Veridian Devs - Innovative Software & Web Development"
+            />
+            <meta
+                itemProp="description"
+                content="Veridian Devs crafts high-performance web applications and custom software solutions to help your business grow and succeed in the digital landscape."
+            />
+            <meta itemProp="image" content="./logo.png" />
+            <link rel="preconnect" href="https://res.cloudinary.com" />
+            <link rel="canonical" href="https://veridiandevs.tech" />
+        </Head>
+    );
+}
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -78,12 +141,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${anta.className} antialiased  !w-screen max-w-screen`}>
-                <main className="relative w-screen h-full">
-                    <div className="fixed inset-0 -z-10 bg-[url('https://res.cloudinary.com/dj046hh4m/image/upload/v1753618056/Screenshot_2025-07-27_173634_va845x.png')] bg-cover bg-center bg-no-repeat"/>
+            <MetaTags />
+            <body className={`${anta.className} antialiased`}>
+                <main className="relative h-full w-full">
+                    <div className="fixed inset-0 -z-10 bg-[url('https://res.cloudinary.com/dj046hh4m/image/upload/v1753618056/Screenshot_2025-07-27_173634_va845x.png')] bg-cover bg-center bg-no-repeat" />
 
-                        <Navbar />
-                        {children}
+                    <Navbar />
+                    {children}
                 </main>
             </body>
         </html>
