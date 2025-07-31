@@ -30,7 +30,7 @@ export default function Team() {
         },
         {
             name: 'Vinayak Mehrotra',
-            title: '(Co-Founder)(Director)',
+            title: '(Co-Founder)(Managing Director)',
             role: 'Associate Software Engineer',
             img: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753885407/Vinayak_svp2gu.jpg',
             platform: {
