@@ -3,6 +3,8 @@ import { Anta } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar';
 import Head from 'next/head';
+import Footer from '@/pages/footer';
+import { HexagonBackground } from '@/components/ui/hexagonBg';
 
 // 2. Configure the font
 const anta = Anta({
@@ -142,14 +144,18 @@ export default function RootLayout({
     return (
         <html lang="en">
             <MetaTags />
-            <body className={`${anta.className} antialiased`}>
+            <body
+                className={`${anta.className} from-cod-gray-700 to-cod-gray-950 bg-gradient-to-br antialiased`}
+            >
+                <Navbar />
                 <main className="relative h-full w-full">
-                    <div className="fixed inset-0 -z-10 bg-[#403e3c] bg-center bg-no-repeat" />
+                    {/* <div className="fixed inset-0 -z-10 bg-[#403e3c] bg-center bg-no-repeat" /> */}
                     {/* <div className="fixed inset-0 -z-10 bg-[url('https://res.cloudinary.com/dj046hh4m/image/upload/v1753618056/Screenshot_2025-07-27_173634_va845x.png')] bg-cover bg-center bg-no-repeat" /> */}
 
-                    <Navbar />
+                    <HexagonBackground className="fixed inset-0 -z-10" />
                     {children}
                 </main>
+                <Footer />
             </body>
         </html>
     );

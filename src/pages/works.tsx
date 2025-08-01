@@ -47,7 +47,7 @@ export default function Works() {
                 <div className="flex flex-col items-center justify-center px-0 text-[var(--primary)] md:w-1/2 md:items-end">
                     <div className="flex gap-2">
                         <div>
-                            <h2 className="mb-1 text-center text-4xl font-bold tracking-wide uppercase md:text-left md:text-[8vw]">
+                            <h2 className="mb-1 text-center text-4xl font-bold tracking-wide uppercase md:text-left md:text-[7vw]">
                                 Works
                             </h2>
                             <p className="text-md flex items-center gap-1 md:text-2xl">

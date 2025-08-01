@@ -39,7 +39,7 @@ export function PopoverForm({
                 layoutId={`${title}-wrapper`}
                 onClick={() => setOpen(true)}
                 style={{ borderRadius: 8 }}
-                className="text-md flex h-11 items-center border bg-[var(--primary)] px-4 font-semibold text-[var(--secondary)] outline-none"
+                className="text-md flex h-11 items-center border bg-white px-4 font-semibold text-bay-of-many-500 outline-none"
             >
                 <motion.span layoutId={`${title}-title`}>{title}</motion.span>
             </motion.button>
@@ -47,7 +47,7 @@ export function PopoverForm({
                 {open && (
                     <motion.div
                         layoutId={`${title}-wrapper`}
-                        className="absolute overflow-hidden  p-1 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.04)] bg-[var(--primary)] outline-none"
+                        className="absolute overflow-hidden  p-1 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.04)] bg-white outline-none"
                         ref={ref}
                         style={{ borderRadius: 10, width, height }}
                     >
@@ -111,7 +111,7 @@ export function PopoverForm({
                                     }}
                                     key="open-child"
                                     style={{ borderRadius: 10 }}
-                                    className="z-20 h-full border bg-[var(--primary)] px-4 py-2 text-[var(--secondary)]"
+                                    className="z-20 h-full border border-black bg-white px-4 py-2 text-black"
                                 >
                                     {openChild}
                                 </motion.div>
@@ -134,7 +134,7 @@ export function PopoverFormButton({
     return (
         <button
             type="submit"
-            className="text-[var(--secondary)] mx-auto flex h-6 w-26 items-center justify-center overflow-hidden rounded-md bg-gradient-to-b px-3 text-xs font-semibold shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
+            className="text-bay-of-many-500 mx-auto flex h-6 w-26 items-center justify-center overflow-hidden rounded-md bg-gradient-to-b px-3 text-sm font-semibold shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
         >
             <AnimatePresence mode="popLayout" initial={false}>
                 <motion.span
@@ -213,10 +213,10 @@ export function PopoverFormSuccess({
                     strokeLinejoin="round"
                 />
             </svg>
-            <h3 className="text-[var(--secondary)] mt-2 mb-1 text-sm font-medium">
+            <h3 className="text-white mt-2 mb-1 text-sm font-medium">
                 {title}
             </h3>
-            <p className="text-[var(--secondary)]/90 mx-auto max-w-xs text-center text-sm text-pretty">
+            <p className="text-white mx-auto max-w-xs text-center text-sm text-pretty">
                 {description}
             </p>
         </>

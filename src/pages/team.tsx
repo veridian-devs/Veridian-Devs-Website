@@ -69,7 +69,7 @@ export default function Team() {
                 <div className="flex flex-col items-center justify-center space-y-4 px-0 text-[var(--primary)] md:w-1/2 md:items-end md:space-x-10">
                     <div className="flex gap-2">
                         <div className="text-right">
-                            <h2 className="mb-1 text-center text-4xl font-bold tracking-wide uppercase md:text-right md:text-[8vw]">
+                            <h2 className="mb-1 text-center text-4xl font-bold tracking-wide uppercase md:text-right md:text-[7vw]">
                                 The Team
                             </h2>
                             <p className="text-md flex items-center gap-1 text-center md:text-right md:text-xl">
