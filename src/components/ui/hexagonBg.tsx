@@ -75,10 +75,10 @@ function HexagonBackground({
                                         className={cn(
                                             'relative',
                                             '[clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)]',
-                                            "before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-white before:opacity-100 before:transition-all before:duration-1000 before:content-[''] dark:before:bg-cod-gray-950",
-                                            "after:absolute after:inset-[var(--hexagon-margin)] after:bg-white after:content-[''] dark:after:bg-transparent",
+                                            "before:absolute before:top-0 before:left-0 before:h-full before:w-full before:opacity-100 before:transition-all before:duration-1000 before:content-[''] before:bg-cod-gray-950",
+                                            "after:absolute after:inset-[var(--hexagon-margin)] after:content-[''] after:bg-transparent",
                                             'after:[clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)]',
-                                            'hover:before:bg-neutral-200 hover:before:opacity-100 hover:before:duration-0 hover:after:bg-neutral-100 hover:after:opacity-100 hover:after:duration-0 dark:hover:before:bg-neutral-800 dark:hover:after:bg-cod-gray-950',
+                                            ' hover:before:opacity-100 hover:before:duration-0 hover:after:opacity-100 hover:after:duration-0 hover:before:bg-neutral-800 hover:after:bg-cod-gray-950',
                                             hexagonProps?.className
                                         )}
                                     />

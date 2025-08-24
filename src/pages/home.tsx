@@ -435,7 +435,6 @@ export default function Home() {
                 </div>
                 <div className="relative h-full w-full md:w-2/5">
                     <div className="relative mx-auto h-full w-full max-w-7xl overflow-hidden px-4 md:h-[80vh]">
-                        {/* <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full bg-gradient-to-b from-transparent to-white select-none dark:to-black" /> */}
                         <div className="absolute -top-0 left-0 z-10 h-72 w-full md:h-full md:py-10">
                             <Suspense fallback={<div>Loading...</div>}>
                                 <World
@@ -574,6 +573,6 @@ export function RequestCallbackButton() {
 
 export function GlobeDemo() {
     return (
-        <div className="relative flex h-screen w-full flex-row items-center justify-center bg-white py-20 md:h-auto dark:bg-black"></div>
+        <div className="relative flex h-screen w-full flex-row items-center justify-center py-20 md:h-auto bg-black"></div>
     );
 }
