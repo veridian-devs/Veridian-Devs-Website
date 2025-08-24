@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion'; // Import framer-motion
-import GlassSurface from './ui/glass'; // Adjust the import path to your GlassSurface component
+import { motion, AnimatePresence } from 'framer-motion'; // Import framer-motionmponent
 
 // SVG Icon for the menu (hamburger)
 const MenuIcon = ({ className }: { className?: string }) => (
