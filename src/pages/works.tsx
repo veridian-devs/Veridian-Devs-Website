@@ -1,33 +1,90 @@
-import { CardSwipe } from "@/components/featuredWorks";
+'use client';
 
+import { Marquee } from '@/components/featuredWorks';
+import Link from 'next/link';
+import { CldImage } from 'next-cloudinary';
 
 export default function Works() {
+    const images = [
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753716964/YAATRIKA_b2lzzo.png',
+            alt: 'Work 1 - YAATRIKA',
+            url: 'https://yaatrika.vercel.app/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753791886/PORTFOLIO_si86bg.jpg',
+            alt: 'Work 2 - PORTFOLIO_SHIVAM-SAXENA',
+            url: 'https://shiv-am-saxena.vercel.app/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753716963/UNIONYX_muncwf.png',
+            alt: 'Work 3 - UNIONYX',
+            url: 'https://unionyx.vercel.app/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753792035/music-web_qcxufi.png',
+            alt: 'Work 4 - MUSIC-WEB',
+            url: 'https://mehrotravinayak6.github.io/music_web/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753792027/Musica_fee4bp.png',
+            alt: 'Work 5 - MUSICA',
+            url: 'https://mehrotravinayak6.github.io/musica/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753792021/Serinidad_homes_dz59fx.png',
+            alt: 'Work 6 - SERENIDAD_HOMES',
+            url: 'https://mehrotravinayak6.github.io/SERENI/',
+        },
+        {
+            src: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753791883/OTHER_WORKS_wqx1uv.png',
+            alt: 'Other Works',
+        },
+    ];
     return (
-        <div className="h-full w-full space-y-8 bg-[var(--primary)]/10 px-6 py-14 backdrop-blur-xs bg-gradient-to-b from-[var(--secondary)]/60 to-[var(--secondary)]/30 sm:py-30 md:px-28 md:py-20">
-            <h2 className="z-0 flex w-fit justify-self-center rounded-4xl border border-[var(--primary)]/50 bg-[var(--secondary)]/90 px-7 py-4 text-center text-3xl font-bold tracking-wider uppercase">
-                {'{ '}Works{' }'}
-            </h2>
-            <div>
-                <CardSwipe
-                    images={[
-                        {
-                            src: 'https://images.unsplash.com/photo-1753240810334-5d626bdc26ef?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                            alt: 'Work 1',
-                            url: 'https://yaatrika.vercel.app/'
-                        },
-                        {
-                            src: 'https://images.unsplash.com/photo-1747227825543-5da2c9f03222?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                            alt: 'Work 2',
-                            url: 'https://shiv-am-saxena.vercel.app/'
-                        },
-                        {
-                            src: 'https://images.unsplash.com/photo-1752170337854-09086f036696?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                            alt: 'Work 3',
-                            url: 'https://unionyx.vercel.app/'
-                        },
-                    ]}
-                    slideShadows={true}
-                />
+        <div className="h-full w-full space-y-8 bg-gradient-to-b from-[var(--secondary)]/60 to-[var(--secondary)]/30 px-6 py-14 backdrop-blur-xs sm:py-30 md:px-28 md:py-20">
+            <div className="flex flex-col items-center justify-center space-y-8 md:flex-row-reverse md:justify-between md:space-x-8">
+                <div className="flex flex-col items-center justify-center px-0 text-cod-gray-100 md:w-1/2 md:items-end">
+                    <div className="flex gap-2">
+                        <div>
+                            <h2 className="mb-1 text-center text-4xl font-bold tracking-wide uppercase md:text-left md:text-[7vw]">
+                                Works
+                            </h2>
+                            <p className="text-md flex items-center gap-1 md:text-2xl">
+                                &larr; Narrating success stories.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className={`relative h-full w-full md:w-1/2`}>
+                    <Marquee pauseOnHover className="[--duration:18s] rounded-2xl">
+                        {images.map((image, idx) => (
+                            <div
+                                key={idx}
+                                className="relative flex h-66 w-1/2 items-center justify-center overflow-hidden rounded-2xl p-5"
+                            >
+                                <CldImage
+                                    src={image.src}
+                                    width={350}
+                                    height={350}
+                                    className="h-full w-full rounded-2xl object-cover"
+                                    alt={image.alt}
+                                />
+                                {image.url && (
+                                    <Link
+                                        href={image.url}
+                                        target="_blank"
+                                        className="absolute inset-0 m-5 flex items-center justify-center rounded-xl bg-cod-gray-950/25 transition-colors duration-300 hover:bg-[var(--primary)]/50"
+                                    >
+                                        <span className="rounded-lg bg-cod-gray-900/80 px-3 py-1.5 text-base font-semibold text-cod-gray-50/85">
+                                            Visit Project
+                                        </span>
+                                    </Link>
+                                )}
+                            </div>
+                        ))}
+                    </Marquee>
+                </div>
             </div>
         </div>
     );

@@ -57,23 +57,8 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-5 z-100 flex justify-center w-full px-4">
-            <div className="w-full md:max-w-7xl">
-                <GlassSurface
-                    width={'100%'}
-                    borderRadius={50}
-                    displace={2}
-                    distortionScale={-180}
-                    redOffset={5}
-                    greenOffset={15}
-                    blueOffset={25}
-                    brightness={60}
-                    opacity={0.1}
-                    mixBlendMode="luminosity"
-                    blur={20}
-                    saturation={1}
-                    borderWidth={5}
-                    className='border border-white/30'
-                >
+            <div className="w-full md:max-w-6xl">
+                <div className='border border-white/30 rounded-full px-3 py-3 backdrop-blur-md'>
                     <div className="w-full flex items-center justify-between px-2 md:px-6">
                         {/* Logo / Brand Name */}
                         <Link
@@ -130,46 +115,37 @@ export default function Navbar() {
                             </button>
                         </div>
                     </div>
-                </GlassSurface>
+                </div>
+                {/* ...existing code... */}
 
 
                 {/* Mobile Dropdown Menu with Animation */}
                 <AnimatePresence>
                     {isMenuOpen && (
                         <motion.div
-                            className="md:hidden mt-2 h-50"
-                            initial={{ opacity: 0, y: -20 }} // Start invisible and slightly above
-                            animate={{ opacity: 1, y: 0 }}   // Animate to fully visible and in position
-                            exit={{ opacity: 0, y: -20 }}    // Animate out to invisible and slightly above
+                            className="md:hidden mt-2 h-fit pb-2 border border-white/20 rounded-3xl backdrop-blur-md bg-white/20 flex flex-col items-center"
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                         >
-                            <GlassSurface
-                                width={'100%'}
-                                height={275}
-                                borderRadius={30}
-                                displace={2}
-                                blur={15}
-                                backgroundOpacity={0.2}
-                                className='border border-white/20'
-                            >
-                                <nav className="flex flex-col items-center space-y-4 pb-4 w-full">
-                                    {navLinks.map((link) => (
-                                        <Link
-                                            key={link.href}
-                                            href={link.href}
-                                            className="text-white/90 hover:text-white text-lg w-full text-center py-2"
-                                            onClick={() => setIsMenuOpen(false)}
-                                        >
-                                            {link.label}
-                                        </Link>
-                                    ))}
-                                    <div className="pt-4">
-                                        <Link className='text-[#242d8c] text-lg font-semibold bg-[#F1EAD8] px-5 py-3 rounded-full border-[#F1EAD8] border' href={'/book-a-call'}>
-                                            Book a call &rarr;
-                                        </Link>
-                                    </div>
-                                </nav>
-                            </GlassSurface>
+                            <nav className="flex flex-col items-center space-y-4 pb-4 w-full">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className="text-white/90 hover:text-white text-lg w-full text-center py-2"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                ))}
+                                <div className="pt-4">
+                                    <Link className='text-[#242d8c] text-lg font-semibold bg-[#F1EAD8] px-5 py-3 rounded-full border-[#F1EAD8] border' href={'/book-a-call'}>
+                                        Book a call &rarr;
+                                    </Link>
+                                </div>
+                            </nav>
                         </motion.div>
                     )}
                 </AnimatePresence>
