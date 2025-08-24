@@ -8,7 +8,7 @@ export default function Team() {
     const teamMembers = [
         {
             name: `Akash Singh`,
-            title: `(Co-Founder)(CEO)`,
+            // title: `(Co-Founder)(CEO)`,
             role: 'Associate Software Engineer',
             img: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753885407/Akash_kauzts.jpg',
             platform: {
@@ -19,7 +19,7 @@ export default function Team() {
         },
         {
             name: 'Shivam Saxena',
-            title: '(Co-Founder)(CTO)',
+            // title: '(Co-Founder)(CTO)',
             role: 'Full-Stack Developer',
             img: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753885410/Shivam_cvwk5g.jpg',
             platform: {
@@ -30,7 +30,7 @@ export default function Team() {
         },
         {
             name: 'Vinayak Mehrotra',
-            title: '(Co-Founder)(Managing Director)',
+            // title: '(Co-Founder)(Managing Director)',
             role: 'Associate Software Engineer',
             img: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753885407/Vinayak_svp2gu.jpg',
             platform: {
@@ -41,7 +41,7 @@ export default function Team() {
         },
         {
             name: 'Ritesh Patel',
-            title: '(VP of Enggineering)',
+            // title: '(VP of Engineering)',
             role: 'UI/UX Designer',
             img: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753885407/Ritesh_kzvcej.jpg',
             platform: {
@@ -52,7 +52,7 @@ export default function Team() {
         },
         {
             name: 'Divyansh Singh',
-            title: '(Project Manager)',
+            // title: '(Project Manager)',
             role: 'Architect & Designer',
             img: 'https://res.cloudinary.com/dj046hh4m/image/upload/v1753887344/Divyansh_hmlal9.jpg',
             platform: {
@@ -66,7 +66,7 @@ export default function Team() {
     return (
         <div className="h-full w-full space-y-8 bg-gradient-to-b from-[var(--secondary)]/60 to-[var(--secondary)]/30 px-6 py-14 backdrop-blur-xs sm:py-30 md:px-28 md:py-20">
             <div className="flex flex-col items-center justify-between space-y-8 md:flex-row-reverse md:justify-between md:space-x-8">
-                <div className="flex flex-col items-center justify-center space-y-4 px-0 text-[var(--primary)] md:w-1/2 md:items-end md:space-x-10">
+                <div className="flex flex-col items-center justify-center space-y-4 px-0 text-cod-gray-50 md:w-1/2 md:items-end md:space-x-10">
                     <div className="flex gap-2">
                         <div className="text-right">
                             <h2 className="mb-1 text-center text-4xl font-bold tracking-wide uppercase md:text-right md:text-[7vw]">
@@ -102,7 +102,6 @@ export default function Team() {
                                     name={member.name}
                                     role={member.role}
                                     img={member.img}
-                                    title={member.title}
                                     platform={member.platform}
                                 />
                             </SwiperSlide>

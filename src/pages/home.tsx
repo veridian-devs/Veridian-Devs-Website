@@ -411,13 +411,13 @@ export default function Home() {
     return (
         <div className="flex h-full w-full flex-col items-center justify-between space-y-10 px-6 py-14 sm:py-30 md:h-dvh md:px-28 md:py-24">
             <div className="flex w-full flex-col items-center justify-center space-y-8 md:flex-row md:items-start md:justify-between md:space-y-0 md:space-x-8">
-                <div className="flex flex-col items-center justify-center px-0 text-[var(--primary)] md:w-3/5 md:items-start md:space-y-10">
+                <div className="flex flex-col items-center justify-center px-0 text-[var(--primary)] md:w-3/5 md:items-start md:space-y-5">
                     {/* <div className="bg-bay-of-many-600/40 h-fit w-fit rounded-4xl border border-gray-200 px-3 py-1 text-center backdrop-blur-3xl">
                         <ShinyText className="text-md">
                             Veridian Devs. - Your Dev Partner
                         </ShinyText>
                     </div> */}
-                    <h1 className="w-full text-left text-5xl font-extrabold tracking-wide text-white capitalize md:text-6xl">
+                    <h1 className="w-full text-center md:text-left text-5xl font-extrabold tracking-wide text-white capitalize md:text-[5vw]">
                         We don't just launch{' '}
                         <LineShadow className="italic" shadowColor={'white'}>
                             sites
@@ -427,16 +427,16 @@ export default function Home() {
                             legacies.
                         </LineShadow>
                     </h1>
-                    <p className="bg-bay-of-many-600/30 w-5/6 p-3 text-left text-lg text-neutral-300 md:text-3xl lg:w-2/3">
+                    <p className="bg-bay-of-many-600/30 w-5/6 p-3 text-center md:text-left text-lg text-neutral-300 md:text-[2vw] lg:w-2/3">
                         A website is an expense. A market-leading digital
                         platform is an investment. We only build the latter.
                     </p>
                     <RequestCallbackButton />
                 </div>
                 <div className="relative h-full w-full md:w-2/5">
-                    <div className="relative mx-auto h-full w-full max-w-7xl overflow-hidden px-4 md:h-[40rem]">
+                    <div className="relative mx-auto h-full w-full max-w-7xl overflow-hidden px-4 md:h-[80vh]">
                         {/* <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full bg-gradient-to-b from-transparent to-white select-none dark:to-black" /> */}
-                        <div className="absolute -top-10 left-0 z-10 h-72 w-full md:h-full md:py-10">
+                        <div className="absolute -top-0 left-0 z-10 h-72 w-full md:h-full md:py-10">
                             <Suspense fallback={<div>Loading...</div>}>
                                 <World
                                     data={sampleArcs}
@@ -447,7 +447,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Magnet
+            {/* <Magnet
                 padding={50}
                 magnetStrength={2}
                 disabled={false}
@@ -457,9 +457,9 @@ export default function Home() {
                     text="SCROLL ⁕ DOWN ⁕ SCROLL ⁕ DOWN ⁕ "
                     onHover="speedUp"
                     spinDuration={20}
-                    className="hidden h-2/3 w-2/3 md:block"
+                    className="hidden h-20 w-2/3 md:block"
                 />
-            </Magnet>
+            </Magnet> */}
         </div>
     );
 }

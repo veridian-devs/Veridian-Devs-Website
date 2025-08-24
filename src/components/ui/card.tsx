@@ -25,13 +25,13 @@ export default function TeamCard({ name, role, img, title, platform }: CardProps
                     width={275}
                     className="glass bg-contain"
                     alt={`${name} - ${role}`}
-                    // style={{ backgroundImage: `url(${img})` }}
+                // style={{ backgroundImage: `url(${img})` }}
                 />
                 <div className="content">
                     <span className="title">
                         {name}
                         <br />
-                        <span className="text-sm">{title}</span>
+                        {title && <span className="text-sm">{title}</span>}
                     </span>
                     <span className="text">{role}</span>
                 </div>

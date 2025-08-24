@@ -144,7 +144,7 @@ const Footer = () => {
                             style={{ color: 'transparent' }}
                             src="https://res.cloudinary.com/dj046hh4m/image/upload/v1753978523/Social_Media_nln4ij.svg"
                         />
-                        <p className="absolute top-[70px] left-16 z-10 font-medium">
+                        <p className="absolute top-[70px] left-16 z-10 font-medium text-cod-gray-950">
                             Social Media Integrations
                         </p>
                         <div className="absolute left-10 -z-1 mt-7 flex h-[439px] w-[405px]">

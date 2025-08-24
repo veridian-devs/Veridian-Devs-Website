@@ -44,7 +44,7 @@ export default function Works() {
     return (
         <div className="h-full w-full space-y-8 bg-gradient-to-b from-[var(--secondary)]/60 to-[var(--secondary)]/30 px-6 py-14 backdrop-blur-xs sm:py-30 md:px-28 md:py-20">
             <div className="flex flex-col items-center justify-center space-y-8 md:flex-row-reverse md:justify-between md:space-x-8">
-                <div className="flex flex-col items-center justify-center px-0 text-[var(--primary)] md:w-1/2 md:items-end">
+                <div className="flex flex-col items-center justify-center px-0 text-cod-gray-100 md:w-1/2 md:items-end">
                     <div className="flex gap-2">
                         <div>
                             <h2 className="mb-1 text-center text-4xl font-bold tracking-wide uppercase md:text-left md:text-[7vw]">
@@ -74,9 +74,9 @@ export default function Works() {
                                     <Link
                                         href={image.url}
                                         target="_blank"
-                                        className="absolute inset-0 m-5 flex items-center justify-center rounded-xl bg-[var(--primary)]/10 transition-colors duration-300 hover:bg-[var(--primary)]/50"
+                                        className="absolute inset-0 m-5 flex items-center justify-center rounded-xl bg-cod-gray-950/25 transition-colors duration-300 hover:bg-[var(--primary)]/50"
                                     >
-                                        <span className="rounded-lg bg-[var(--primary)]/80 px-3 py-1.5 text-base font-semibold text-[var(--secondary)]/85">
+                                        <span className="rounded-lg bg-cod-gray-900/80 px-3 py-1.5 text-base font-semibold text-cod-gray-50/85">
                                             Visit Project
                                         </span>
                                     </Link>
