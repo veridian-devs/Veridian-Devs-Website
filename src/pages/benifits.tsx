@@ -71,7 +71,7 @@ export default function Benifits() {
         }
     }];
     return (
-        <div className="h-full w-full space-y-8 bg-gradient-to-b from-[var(--secondary)]/30 to-[var(--secondary)]/30 px-6 py-14 backdrop-blur-xs sm:py-30 md:px-28 md:py-20">
+        <div id="benifits" className="h-full w-full space-y-8 bg-gradient-to-b from-[var(--secondary)]/30 to-[var(--secondary)]/30 px-6 py-14 backdrop-blur-xs sm:py-30 md:px-28 md:py-20">
             <div className="relative flex flex-col items-center justify-center space-y-8 md:flex-row md:items-start md:justify-between md:space-y-0 md:space-x-8">
                 <div className="sticky top-24 flex flex-col items-center justify-center px-0 text-white md:top-2/5 md:w-1/2 md:-translate-y-0 md:items-start">
                     <div className="flex gap-2">
@@ -105,7 +105,7 @@ const StickyCards = ({adv, disadv}:CardContent) => {
                 <p className="text-sm mt-2 text-white/75">{adv.desc}</p>
             </div>
             <div className="h-full w-full rounded-b-xl bg-red-500/10 border border-red-500/75 px-3 py-1.5 pb-4 backdrop-blur-3xl md:w-1/2 md:rounded-l-none md:rounded-r-xl">
-                <span className="rounded-br-sm bg-red-500/75 px-3 py-2 -ml-3">With Veridians &rarr;</span><br />
+                <span className="rounded-br-sm bg-red-500/75 px-3 py-2 -ml-3">Without Veridians &rarr;</span><br />
                 <h5 className="mt-4 text-lg text-cod-gray-100">• {disadv.title}</h5>
                 <p className="text-sm text-white/75 mt-2">{disadv.desc}</p>
             </div>

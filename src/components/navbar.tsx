@@ -79,7 +79,7 @@ export default function Navbar() {
                             </Link>
                             <div className='text-white text-md flex items-center space-x-8'>
                                 <Link href={'/services'} className='text-[var(--primary)] hover:-translate-y-1 transition-all duration-300'>Services</Link>
-                                <Link href={'/benefits'} className='text-[var(--primary)] hover:-translate-y-1 transition-all duration-300'>Benefits</Link>
+                                <a href={'#benefits'} className='text-[var(--primary)] hover:-translate-y-1 transition-all duration-300'>Benefits</a>
                                 <Link href={'/comparison'} className='text-[var(--primary)] hover:-translate-y-1 transition-all duration-300'>Comparison</Link>
                             </div>
                             <Link className='text-[#242d8c] hidden lg:block md text-lg font-regular bg-[var(--primary)] hover:border hover:border-[var(--primary)] px-3 py-1.5 rounded-full hover:bg-transparent hover:text-white transition-all duration-500' href={'/book-a-call'}>

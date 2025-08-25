@@ -320,21 +320,15 @@ const Footer = () => {
                                 <h1 className="font-extrabold">Legal</h1>
                                 <Link
                                     className="font-normal text-nowrap text-white/80"
-                                    href="/"
+                                    href="/privacy-policy"
                                 >
                                     Privacy Policy
                                 </Link>
                                 <Link
                                     className="font-normal text-nowrap text-white/80"
-                                    href="/"
+                                    href="/terms-of-service"
                                 >
                                     Terms of Service
-                                </Link>
-                                <Link
-                                    className="font-normal text-nowrap text-white/80"
-                                    href="/"
-                                >
-                                    Cookie Policy
                                 </Link>
                             </div>
                         </div>
