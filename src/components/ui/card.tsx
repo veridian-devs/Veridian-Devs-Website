@@ -21,8 +21,8 @@ export default function TeamCard({ name, role, img, title, platform }: CardProps
             <div className="card">
                 <Image
                     src={img}
-                    height={375}
-                    width={275}
+                    height={325}
+                    width={250}
                     className="glass bg-contain"
                     alt={`${name} - ${role}`}
                 // style={{ backgroundImage: `url(${img})` }}

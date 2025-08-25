@@ -1,14 +1,16 @@
 .parent {
-    width: 295px;
-    height: 365px;
+    width:100%;
+    aspect-ratio: 4/5;
     perspective: 1200px;
-    
+    overflow: hidden;
+    border-radius: 40px;
 }
 
 .card {
     position: relative;
     height: 100%;
     border-radius: 40px;
+    overflow: hidden;
     background: linear-gradient(135deg,
             var(--color-cod-gray-700) 0%,
             var(--color-cod-gray-800) 100%);
@@ -22,8 +24,10 @@
 .glass {
     transform-style: preserve-3d;
     position: absolute;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
     inset: 10px;
-    border-radius: 45px;
+    border-radius: 50px;
     border-top-left-radius: 100%;
     background: linear-gradient(0deg,
             rgba(255, 255, 255, 0.2) 0%,
@@ -32,10 +36,11 @@
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 0.6s ease-in-out;
+    overflow:hidden;
 }
 
 .content {
-    padding: 20px 20px 35px 20px ;
+    padding: 20px 20px 25px 20px;
     transform: translate3d(0, 0, 31px);
     display: flex;
     width: 100%;
@@ -45,9 +50,10 @@
     justify-self: end;
     align-items: end;
     background: #00000048;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     backdrop-filter: blur(2px);
     bottom: 0px;
-    border-radius: 20px 0px 0px 20px ;
     flex-direction: column;
 }
 
@@ -55,13 +61,13 @@
     display: block;
     color: var(--color-cod-gray-50);
     font-weight: 900;
-    font-size: 22px;
+    font-size: 1.25vw;
 }
 
 .content .text {
     display: block;
     color: var(--color-cod-gray-50);
-    font-size: 14px;
+    font-size: .95vw;
     width: 65%;
     margin-top: 5px;
 }
@@ -77,6 +83,8 @@
     align-items: center;
     justify-content: start;
     transform: translate3d(0, 0, 31px);
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .bottom .social-buttons-container {
@@ -86,7 +94,7 @@
 }
 
 .bottom .social-buttons-container .social-button {
-    width: 32px;
+    width: 2vw;
     aspect-ratio: 1;
     padding: 6px;
     background: var(--color-cod-gray-200);
@@ -116,7 +124,7 @@
 }
 
 .bottom .social-buttons-container .social-button .svg {
-    width: 16px;
+    width: 1.25vw;
     fill: var(--color-bay-of-many-800);
 }
 
@@ -136,30 +144,34 @@
     fill: #3c2f80;
 }
 
-.parent:hover .card {
+/* .parent:hover .card {
     transform: translate3d(0, 0, 50px);
     box-shadow:
         rgba(30, 30, 60, 0.3) 30px 50px 25px -40px,
         rgba(30, 30, 60, 0.15) 0px 25px 30px 0px;
-}
+} */
 
 .parent:hover .card .bottom .social-buttons-container .social-button {
     transform: translate3d(0, 0, 60px);
     box-shadow: rgba(30, 30, 60, 0.25) 5px 20px 10px 0px;
 }
 
-.parent:hover .card .logo .circle2 {
-    transform: translate3d(0, 0, 65px);
-}
 
-.parent:hover .card .logo .circle3 {
-    transform: translate3d(0, 0, 85px);
-}
+@media (max-width: 768px) {
+    .content .title {
+        font-size: 3.5vw;
+    }
 
-.parent:hover .card .logo .circle4 {
-    transform: translate3d(0, 0, 105px);
-}
+    .content .text {
+        font-size: 2.5vw;
+        width: 80%;
+    }
 
-.parent:hover .card .logo .circle5 {
-    transform: translate3d(0, 0, 125px);
+    .bottom .social-buttons-container .social-button {
+        width: 6vw;
+    }
+
+    .bottom .social-buttons-container .social-button .svg {
+        width: 3.5vw;
+    }
 }
